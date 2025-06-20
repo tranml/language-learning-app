@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import FilterChips from "../components/FilterChips";
 import VideoCard from "../components/VideoCard";
 import BottomNav from "../components/BottomNav";
+import FeaturedContent from "../components/FeaturedContent";
 
 const dummyVideos = [
   {
@@ -38,6 +39,7 @@ const HomeScreen = () => {
       <Header />
       <FilterChips />
       <FlatList
+        ListHeaderComponent={<FeaturedContent />}
         data={dummyVideos}
         renderItem={({ item }) => <VideoCard video={item} />}
         keyExtractor={(item) => item.id}
