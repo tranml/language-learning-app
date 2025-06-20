@@ -5,6 +5,7 @@ import FilterChips from "../components/FilterChips";
 import VideoCard from "../components/VideoCard";
 import BottomNav from "../components/BottomNav";
 import FeaturedContent from "../components/FeaturedContent";
+import ShortsGrid from "../components/ShortsGrid";
 
 const dummyVideos = [
   {
@@ -44,6 +45,7 @@ const HomeScreen = () => {
         renderItem={({ item }) => <VideoCard video={item} />}
         keyExtractor={(item) => item.id}
         style={styles.feed}
+        ListFooterComponent={<ShortsGrid />}
       />
       <BottomNav />
     </SafeAreaView>
